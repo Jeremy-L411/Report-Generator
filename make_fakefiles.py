@@ -8,7 +8,7 @@ import os
 
 
 techs = ["Bob Dole", "Marilyn Monroe", "Abraham Lincon", "Nelson Mandela",
-         "Winston Churchill", "Donald Trump", "BIll Gates",
+         "Winston Churchill", "Donald Trump", "Bill Gates",
          "Margaret Thatcher", "Christopher Columbus", "Muhammad Ali",
          "Charles Darwin", "Paul McCartney", "Albert Einstein", "Elvis Presley",
          "Ludwig Beetoven", "Lyndon Johnson", "Rosa Parks",
@@ -29,13 +29,13 @@ def get_random_date():
     return '{2}-{0}-{1}'.format(month, day, year)
 
 for i in range(50):
-    etmp = [random.choice(techs), get_random_date(), round(random.uniform(0, 400), 2)]
-    expenses.append(etmp)
+    employee_tmp = [random.choice(techs), get_random_date(), round(random.uniform(0, 400), 2)]
+    expenses.append(employee_tmp)
 
 for i in range(0):
-    btemp = [random.choice(techs), get_random_date(), random.randrange(0, 1250, 250),
-             random.randrange(0, 750, 150), random.randrange(0, 1250, 250)]
-    bonus.append(btemp)
+    bonus_tmp = [random.choice(techs), get_random_date(), random.randrange(0, 1250, 250),
+                 random.randrange(0, 750, 150), random.randrange(0, 1250, 250)]
+    bonus.append(bonus_tmp)
 
 for i in range(len(expenses)):
     ename, edate, total = expenses[i]

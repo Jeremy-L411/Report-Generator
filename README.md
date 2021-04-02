@@ -1,14 +1,26 @@
 # Report-Generator
 
-These programs were designed to be executed on a server one at a time
+This was a personal project I worked on to generate monthly 
+and yearly reports for a job I worked at. I started off just wanting to do 
+my own expenses and later decided to expand it to multiple people with multiple 
+months and years. 
 
-Starting with either make_fakefiles or structured_random_files to generate a set of fake data to test the code. Adjust 
-the values in the for loops to get desired number of files to run
+There are two ways to generate fake data in the specific format for this program. 
+One is make_fakefiles.py, this will generate a random number of people, months and years. 
+It works well, however, you may only have one employee with one expense
+and another employee with 20. 
 
-Next execution is moveFiles, this organizes the files into Name> Year> Month files. If the organized folder does not
-exist it creates one. 
+structured_random_files.py is as it states, structured. You can specify how many employees, 
+how many expenses in a month and how many bonuses. 
 
-monthly_report creates a monthly mulitsheet xlsx file in each month for each name
+The format for organizing the employees is Name > Year > Month for each name 
+in the sort folder.
 
-yearly_report creates a sum of all the bonus and expense files for each name
+After using one of the report generators monthly_report.py and year_report.py can be ran 
+to perform a monthly report for each month for each employee or a yearly report for each employee.
 
+It is configured so that there is a main sorting folder where you put all the randomly generated 
+expense and bonus forms, then in moveFiles.py select the folder where they are located,
+a temporary folder that will generate its own folders and delete once it has accomplished sorting
+and then a destination folder for the sorted reports. If a name, year, or month has already been 
+created it will not rewrite. 

@@ -42,7 +42,7 @@ for i in range(3):
 
     for l in range(len(expenses)):
         ename, edate, total = expenses[l]
-        wb = xlsxwriter.Workbook('Test_Expense ' + ename + str(l) + '.xlsx')
+        wb = xlsxwriter.Workbook('Expense ' + ename + str(l) + '.xlsx')
         ws = wb.add_worksheet('Expenses')
 
         ws.write('B5', ename)
@@ -53,7 +53,7 @@ for i in range(3):
 
     for m in range(len(bonus)):
         bname, bdate, travel, on_call, call_cases = bonus[m]
-        wb = xlsxwriter.Workbook('Test_Bonus ' + bname + str(m) + '.xlsx')
+        wb = xlsxwriter.Workbook('Bonus ' + bname + str(m) + '.xlsx')
         ws = wb.add_worksheet('Bonuses')
 
         ws.write('C3', bname)

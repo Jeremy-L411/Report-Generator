@@ -19,10 +19,12 @@ def create_report(path, name, elist, date, blist, report_name):
     we.write(row, col, 'Date')
     we.write(row, col + 1, 'Total')
     row += 1
+
     for edate, total in elist:
         we.write(row, col, edate)
         we.write(row, col + 1, total, money)
         row += 1
+
     we.write(row, 0, 'Total:')
     e_cell_range = xlsxwriter.utility.xl_range(1, 1, row - 1, 1)
     e_formula = '=SUM(%s)' % e_cell_range
@@ -44,6 +46,7 @@ def create_report(path, name, elist, date, blist, report_name):
         wbo.write(row, col + 2, on_call, money)
         wbo.write(row, col + 3, call_cases, money)
         row += 1
+
     wbo.write(row, 0, 'Total:')
     t_cell_range = xlsxwriter.utility.xl_range(1, 1, row - 1, 1)
     t_formula = '=SUM(%s)' % t_cell_range
